@@ -9,10 +9,7 @@ public class Grid {
     private char[][] rotatedGrid = new char[3][3];
     private char[][] sides;
 
-    Grid() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter cells: ");
-        String symbols = scanner.nextLine();
+    Grid(String symbols) {
         if (symbols.length() == 9) {
             symbols = symbols.replaceAll("_", " ");
             int j = 0;
@@ -34,7 +31,17 @@ public class Grid {
             setSides();
         }
     }
-
+    Grid() {
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+                grid[i][j] = ' ';
+            }
+        }
+        setRotatedGrid();
+        setDiagonal1();
+        setDiagonal2();
+        setSides();
+    }
     public void setGrid(char[][] grid) {
         this.grid = grid;
         setRotatedGrid();
@@ -42,8 +49,8 @@ public class Grid {
         setDiagonal2();
         setSides();
     }
-    public void setGrid(int[] coordinates) {
-        grid[coordinates[0]][coordinates[1]] = 'X';
+    public void setGrid(int[] coordinates, char XO) {
+        grid[coordinates[0]][coordinates[1]] = XO;
         setRotatedGrid();
         setDiagonal1();
         setDiagonal2();

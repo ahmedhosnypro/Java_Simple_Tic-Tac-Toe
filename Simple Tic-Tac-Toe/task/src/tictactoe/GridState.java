@@ -3,7 +3,7 @@ package tictactoe;
 import java.util.Arrays;
 
 public class GridState {
-    static void state(Grid grid) {
+    static String state(Grid grid) {
         String check = "";
         int X = 0;
         int O = 0;
@@ -23,27 +23,28 @@ public class GridState {
         if (Math.abs(X - O) > 1) {
             check = "Impossible";
         } else {
-            if (empty == 0) {
-                check = checkSides(grid);
-            } else if (empty > 0) {
-                switch (checkSides(grid)){
-                    case "Impossible":
-                        check = "Impossible";
-                        break;
-                    case "X wins":
-                        check = "X wins";
-                        break;
-                    case "O wins":
-                        check = "O wins";
-                        break;
-                    default:
+            switch (checkSides(grid)) {
+                case "Impossible":
+                    check = "Impossible";
+                    break;
+                case "X wins":
+                    check = "X wins";
+                    break;
+                case "O wins":
+                    check = "O wins";
+                    break;
+                default:
+                    if (empty == 0) {
+                        check = "Draw";
+                    } else if (empty > 0) {
                         check = "Game not finished";
-                        break;
-                }
+                    }
+                    break;
             }
         }
-        System.out.println(check);
+        return check;
     }
+
     static char[] simpleSides(Grid grid) {
         char[][] sides = grid.getSides();
         char[] simpleSides = new char[grid.getSides().length];
@@ -65,6 +66,7 @@ public class GridState {
         }
         return simpleSides;
     }
+
     static String checkSides(Grid grid) {
         String check = "";
         char[] Sides = new char[8];
@@ -80,15 +82,10 @@ public class GridState {
         }
         if ((X > 0 && O > 0)) {
             check = "Impossible";
-        } else {
-            if (X == 1) {
-                check = "X wins";
-            } else if (O == 1) {
-                check = "O wins";
-            }
-            else if (X == O){
-                check = "Draw";
-            }
+        } else if (X == 1 && O == 0) {
+            check = "X wins";
+        } else if (O == 1 && X == 0) {
+            check = "O wins";
         }
         return check;
     }

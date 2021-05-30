@@ -6,5 +6,7 @@ tictactoe/Grid.java
  tictactoe.Grid
 tictactoe/GridState.java
  tictactoe.GridState
+tictactoe/Fight.java
+ tictactoe.Fight
 tictactoe/Main.java
  tictactoe.Main

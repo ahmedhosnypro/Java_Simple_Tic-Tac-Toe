@@ -3,7 +3,7 @@ package tictactoe;
 import java.util.Scanner;
 
 public class Move {
-    static boolean move(Grid grid){
+    static boolean move(Grid grid, char XO){
         boolean isContinue = true;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the coordinates: ");
@@ -17,9 +17,12 @@ public class Move {
             case "outOfRange":
                 System.out.println("Coordinates should be from 1 to 3!");
                 break;
+            case "oneParam":
+                System.out.println("enter two numbers!");
+                break;
             case "available":
                 if (chekMove(parseCoordinates(coordinates), grid)){
-                    makeMove(parseCoordinates(coordinates), grid);
+                    makeMove(parseCoordinates(coordinates), grid, XO);
                     isContinue = false;
                 }
                 else {
@@ -33,11 +36,17 @@ public class Move {
     }
     static int[] parseCoordinates(String[] coordinates){
         int[] coordinateToInt = new int[]{-1, -1};
-        try {
-            coordinateToInt[0] = Integer.parseInt(coordinates[0]) - 1;
-            coordinateToInt[1] = Integer.parseInt(coordinates[1]) - 1;
+        if (coordinates.length == 2){
+            try {
+                coordinateToInt[0] = Integer.parseInt(coordinates[0]) - 1;
+                coordinateToInt[1] = Integer.parseInt(coordinates[1]) - 1;
+            }
+            catch (IllegalArgumentException ignored){
+            }
         }
-        catch (IllegalArgumentException ignored){
+        else {
+            coordinateToInt[0] = -2;
+            coordinateToInt[1] = -2;
         }
         return coordinateToInt;
     }
@@ -47,7 +56,11 @@ public class Move {
             if (j == -1) {
                 check = "notNumber";
                 break;
-            } else if (j >= 0 && j < 3) {
+            }
+            else if (j == -2){
+                check = "oneParam";
+            }
+            else if (j >= 0 && j < 3) {
                 check = "available";
             } else {
                 check = "outOfRange";
@@ -59,10 +72,8 @@ public class Move {
     static boolean chekMove(int[] coordinateToInt, Grid grid){
          return grid.getGrid()[coordinateToInt[0]][coordinateToInt[1]] == ' ';
     }
-    static void makeMove(int[] coordinateToInt ,Grid grid){
-        //char[][] move = grid.getGrid();
-        //move[coordinateToInt[0]][coordinateToInt[1]] = 'X';
-        grid.setGrid(coordinateToInt);
+    static void makeMove(int[] coordinateToInt ,Grid grid, char XO){
+        grid.setGrid(coordinateToInt, XO);
     }
 }
 
