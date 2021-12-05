@@ -70,7 +70,7 @@ public class Move {
         return check;
     }
     static boolean chekMove(int[] coordinateToInt, Grid grid){
-         return grid.getGrid()[coordinateToInt[0]][coordinateToInt[1]] == ' ';
+        return grid.getGrid()[coordinateToInt[0]][coordinateToInt[1]] == ' ';
     }
     static void makeMove(int[] coordinateToInt ,Grid grid, char XO){
         grid.setGrid(coordinateToInt, XO);

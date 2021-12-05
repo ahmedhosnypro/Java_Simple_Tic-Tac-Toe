@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="17">
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-classes-java.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-generated-sources-headers-java.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-reports-tests.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-test-results.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-build-tmp.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task-out.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Simple_Tic-Tac-Toe-task.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Branching_statements-The_integer_barrier.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Branching_statements-Theory.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-Count_how_many_times_a_number_occurs.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-Sum_array_elements_greater_than_a_value.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-The_longest_ascending_sequence.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-The_maximum_product_of_adjacent_elements.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Iterating_over_arrays-Theory.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Multidimensional_array-Rotate_a_rectangle_array.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Multidimensional_array-The_star_figure.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.Topics-Multidimensional_array-Theory.main" target="11" />
+      <module name="Simple_Tic-Tac-Toe.util.main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

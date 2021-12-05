@@ -375,9 +375,10 @@ files:
 - name: src/tictactoe/GridState.java
   visible: true
   learner_created: true
-feedback_link: https://hyperskill.org/projects/48/stages/257/implement#comment
+feedback_link: https://hyperskill.org/learn/step/5399#comment
 status: Solved
 feedback:
-  message: Congratulations!
-  time: Sun, 30 May 2021 13:47:34 UTC
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Sun, 05 Dec 2021 13:27:35 UTC
 record: 3
