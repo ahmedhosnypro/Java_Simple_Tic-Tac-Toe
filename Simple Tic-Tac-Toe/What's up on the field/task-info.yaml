@@ -319,7 +319,7 @@ files:
   learner_created: false
 - name: src/tictactoe/Grid.java
   visible: true
-  text: |
+  text: |-
     package tictactoe;
 
     public class Grid {
@@ -355,15 +355,15 @@ files:
   learner_created: true
 - name: src/tictactoe/Print.java
   visible: true
-  text: |
+  text: |-
     package tictactoe;
 
     public class Print {
-        static void printGrid(Grid grid){
+        static void printGrid(Grid grid) {
             System.out.println("---------");
-            for (char[] row: grid.getGrid()){
+            for (char[] row : grid.getGrid()) {
                 System.out.print("| ");
-                for (char ch: row){
+                for (char ch : row) {
                     System.out.print(ch + " ");
                 }
                 System.out.println("|");
@@ -375,10 +375,9 @@ files:
 - name: src/tictactoe/GridState.java
   visible: true
   learner_created: true
-feedback_link: https://hyperskill.org/learn/step/5399#comment
+feedback_link: https://hyperskill.org/projects/48/stages/257/implement#comment
 status: Solved
 feedback:
-  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
-    Academy</a> to continue learning.
-  time: Sun, 05 Dec 2021 13:27:35 UTC
+  message: Congratulations!
+  time: Sun, 30 Jan 2022 20:37:16 UTC
 record: 3

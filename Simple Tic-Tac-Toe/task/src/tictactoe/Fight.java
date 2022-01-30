@@ -8,7 +8,8 @@ public class Fight {
     static void startFight() {
         Grid grid = new Grid();
         printGrid(grid);
-        OuterFor: for (int i = 0; i < 9; i++) {
+        OuterFor:
+        for (int i = 0; i < 9; i++) {
             switch (state(grid)) {
                 case "X wins":
                     System.out.println("X wins");
@@ -26,7 +27,7 @@ public class Fight {
                     } else {
                         XO = 'O';
                     }
-                    while (move(grid, XO));
+                    while (move(grid, XO)) ;
                     printGrid(grid);
             }
         }
